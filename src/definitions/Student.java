@@ -12,4 +12,11 @@ public class Student {
     private int numberOfBooksIssued;
     private Book[] nameOfBooksIssued;
 
+    public Student(String nameOfTheStudent, long universityRollNumber, int numberOfBooksIssued) {
+        this.nameOfStudentFormatFirstMiddleLast = nameOfTheStudent.split(" ");
+        this.universityRollNumber = universityRollNumber;
+        this.numberOfBooksIssued = numberOfBooksIssued;
+        this.nameOfBooksIssued = new Book[numberOfBooksIssued];
+    }
+
 }
