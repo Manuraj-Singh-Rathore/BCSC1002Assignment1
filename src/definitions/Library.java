@@ -39,5 +39,18 @@ public class Library {
     public int hashCode() {
         return Arrays.hashCode(getAllBooksCurrentlyAvailable());
     }
+    public void issuedBook(String bookName) {
+        System.out.println(bookName + "book has been issued to you successfully .");
+    }
+
+    public void listOfBooksIssued() {
+        for (Book book : allBooksCurrentlyAvailable) {
+            System.out.println(book);
+        }
+    }
+
+    public void returnedBook(String bookName) {
+        System.out.println(bookName + " has been returned successfully . ");
+    }
 
 }
