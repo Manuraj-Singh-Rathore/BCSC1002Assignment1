@@ -19,4 +19,35 @@ public class Student {
         this.nameOfBooksIssued = new Book[numberOfBooksIssued];
     }
 
+    public String[] getNameOfStudentFormatFirstMiddleLast() {
+        return nameOfStudentFormatFirstMiddleLast;
+    }
+
+    public void setNameOfStudentFormatFirstMiddleLast(String[] nameOfStudentFormatFirstMiddleLast) {
+        this.nameOfStudentFormatFirstMiddleLast = nameOfStudentFormatFirstMiddleLast;
+    }
+
+    public long getUniversityRollNumber() {
+        return universityRollNumber;
+    }
+
+    public void setUniversityRollNumber(long universityRollNumber) {
+        this.universityRollNumber = universityRollNumber;
+    }
+    public int getNumberOfBooksIssued() {
+        return numberOfBooksIssued;
+    }
+
+    public void setNumberOfBooksIssued(int numberOfBooksIssued) {
+        this.numberOfBooksIssued = numberOfBooksIssued;
+    }
+
+    public Book[] getNameOfBooksIssued() {
+        return nameOfBooksIssued;
+    }
+
+    public void setNameOfBooksIssued(Book[] nameOfBooksIssued) {
+        this.nameOfBooksIssued = nameOfBooksIssued;
+    }
+
 }
