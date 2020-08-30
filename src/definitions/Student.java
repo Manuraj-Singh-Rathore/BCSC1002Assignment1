@@ -7,4 +7,9 @@
 package definitions;
 
 public class Student {
+    private String[] nameOfStudentFormatFirstMiddleLast;
+    private long universityRollNumber;
+    private int numberOfBooksIssued;
+    private Book[] nameOfBooksIssued;
+
 }
