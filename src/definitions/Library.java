@@ -18,4 +18,11 @@ public class Library {
     public Library(Book[] allBooksCurrentlyAvailable) {
         this.allBooksCurrentlyAvailable = allBooksCurrentlyAvailable;
     }
+    public Book[] getAllBooksCurrentlyAvailable() {
+        return allBooksCurrentlyAvailable.clone();
+    }
+
+    public void setAllBooksCurrentlyAvailable(Book[] allBooksCurrentlyAvailable) {
+        this.allBooksCurrentlyAvailable = allBooksCurrentlyAvailable;
+    }
 }
