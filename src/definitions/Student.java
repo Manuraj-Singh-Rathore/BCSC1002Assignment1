@@ -6,6 +6,9 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Student {
     private String[] nameOfStudentFormatFirstMiddleLast;
     private long universityRollNumber;
@@ -48,6 +51,35 @@ public class Student {
 
     public void setNameOfBooksIssued(Book[] nameOfBooksIssued) {
         this.nameOfBooksIssued = nameOfBooksIssued;
+    }
+    @Override
+    public String toString() {
+        return "Student{" +
+                "nameOfStudent=" + Arrays.toString(nameOfStudentFormatFirstMiddleLast) +
+                ", universityRollNumber=" + universityRollNumber +
+                ", numberOfBooksIssued=" + numberOfBooksIssued +
+                ", books=" + Arrays.toString(nameOfBooksIssued) +
+                '}';
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+        Student student = (Student) o;
+        return getUniversityRollNumber() == student.getUniversityRollNumber() &&
+                getNumberOfBooksIssued() == student.getNumberOfBooksIssued() &&
+                Arrays.equals(getNameOfStudentFormatFirstMiddleLast(), student.getNameOfStudentFormatFirstMiddleLast()) &&
+                Arrays.equals(getNameOfBooksIssued(), student.getNameOfBooksIssued());
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(universityRollNumber, getNumberOfBooksIssued());
+        result = 31 * result + Arrays.hashCode(getNameOfStudentFormatFirstMiddleLast());
+        result = 31 * result + Arrays.hashCode((nameOfBooksIssued));
+        return result;
     }
 
 }
