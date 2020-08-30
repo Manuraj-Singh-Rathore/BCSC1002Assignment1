@@ -17,4 +17,13 @@ public class Book {
         this.authorName = authorName;
         this.thirteenDigitISBNNumber = thirteenDigitISBNNumber;
     }
+    public Book() {
+
+    }
+
+    public Book(String bookName) {
+        this.bookName = "One Indian Girl";
+        this.authorName = " Chetan Bhagat .";
+        this.thirteenDigitISBNNumber = "1548965239575";
+    }
 }
